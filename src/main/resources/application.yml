@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: secure-login
+  config:
+    import: optional:file:.env[.properties]
+
+  mongodb:
+    uri: ${MONGODB_URI}
+    database: ${MONGODB_DATABASE:secure_login}
+  data:
+    mongodb:
+      auto-index-creation: true
+
+  thymeleaf:
+    cache: ${THYMELEAF_CACHE:true}
+
+server:
+  port: ${PORT:8080}
+  error:
+    whitelabel:
+      enabled: false
+    include-stacktrace: never
+
+app:
+  theme:
+    name: ${APP_THEME:default}
+    layout: ${APP_LAYOUT:layouts/main}
+  security:
+    max-login-attempts: 5
+    lock-duration: 15m
+    max-sessions-per-user: 3
+    session-timeout: 30m
+    secure-cookie: ${COOKIE_SECURE:false}
+  admin:
+    name: ${ADMIN_NAME:Administrador}
+    email: ${ADMIN_EMAIL:}
+    password: ${ADMIN_PASSWORD:}
+
+logging:
+  level:
+    br.com.danielcardoso.securelogin: INFO
