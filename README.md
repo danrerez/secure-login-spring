@@ -135,7 +135,7 @@ Para gerar e executar o pacote:
 
 ```bash
 ./mvnw clean package
-java -jar target/secure-login-0.0.1-SNAPSHOT.jar
+java -jar target/secure-login-1.0.0.jar
 ```
 
 ## Testes
