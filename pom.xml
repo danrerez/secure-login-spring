@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.com.danielcardoso</groupId>
 	<artifactId>secure-login</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>secure-login</name>
 	<description>Sistema de Login Seguro com Spring Boot, Thymeleaf e MongoDB Atlas</description>
 	<url>https://github.com/danrerez/secure-login-spring</url>
